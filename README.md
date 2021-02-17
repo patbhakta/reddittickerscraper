@@ -24,6 +24,8 @@ Python3 and the following packages:
 * matplotlib
 * asyncpraw
 * cachetools
+* json_flatten
+* datetime
 
 Other than that you need [Cairo](https://cairosvg.org/), for example, for Ubuntu run `apt-get install libpangocairo-1.0-0`.
 
@@ -43,7 +45,7 @@ This will start getting posts, comments, and Redditors from Reddit and store the
 
 #### Processing Posts
 
-Run `python -m spacy download en_core_web_lg`to get spacy-model required for processing posts.
+Run `python -m spacy download en_core_web_sm`to get spacy-model required for processing posts.
 
 Run `python process.py`, this will connect to the DB and start calculating metrics every 120 seconds, the results will be stored in 3 files, `tickers_df_<days>.p`.
 
