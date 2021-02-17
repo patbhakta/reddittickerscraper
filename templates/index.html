@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>TickerRain</title>
+        <title>Reddit Stock Scraper</title>
 
 
         <link rel="stylesheet" href="styles.css">
@@ -20,7 +20,7 @@
 
     	<div class="container">
     		<div style="text-align: center;">
-    			<span> <h1> TickerRain </h1> <h3>  Refresh page for analysis of a newer post </h3>  </span>
+    			<span> <h1> Reddit Ticker Scraper </h1> <h3>  Refresh page for analysis of a newer post </h3>  </span>
 
     		</div>
     		
@@ -73,15 +73,11 @@
 	    	
 	    	<h3 style="font-weight:bold; font-size: 1.8em;">About</h3>
 
-	    	<p> TickerRain is an open-source webapp that stores and analisys reddit posts in a transparent and semi-interactive manner. 
-	    	<br> </br>
-	    	First it starts a Python process that asynchronous gets posts and comments from subreddits like wallstreetbets, options, thetagang, stockmarket, stocks and some more. The posts are stord in the DB and then another process periodacally processes the posts.
-	    	<br> </br>
-	    	Processing consists of using Pandas to compute the aggregated mentions, score (based on votes) and sentiment of each stock ticker.
-	    	Sentiment is computed using Spacy library, utilizing VADER.
-	    	The sentiment analysis of the last post is shown at the orange box before being added to the final plots.
-	    	<br> </br>
-	    	Everything is Open-source and the code for both the server and the client can be seen <a href="https://github.com/GonVas/tickerrain">here</a>.   </p>
+	    	<p>
+	    		Hey guys, this is a website I put up to automatically read through these reddit subs like wallstreetbets, options, thetagang, stockmarket, pennystocks, satoshisibets and others every 2 minutes. It looks for stock mentions, upvotes, downvotes, and try to figure out if the post was positive or just shit talking.
+	    	<br></br>
+	    		Then it graphs it to see what people are talking about or hyping up. This isn't a recommendation to buy or sell, just some info to either look into this stock or stay away from to avoid it's roller coasters. Some people are brilliant but many are dumb and will buy anything. In the end someone gets screwed, hopefully it's not one of us.
+	    	</p>
 
 	    </div>
 
@@ -103,7 +99,7 @@
 	    <div class="center">
 	    	<img src="/plot7.png" alt="7days">
 
-	    	Plots are updated every 120 seconds.
+	    	Plots are updated every 2 minutes.
 	    </div>
 
 
