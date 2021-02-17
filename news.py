@@ -24,9 +24,11 @@ tickers_pd = pd.read_csv('tickers.csv')
 
 print('Len of ticker before: ' + str(len(tickers_pd)))
 
-for index, row in tickers_pd.iterrows():
-    if(row['Market Cap'] < 300_000_000):
-        tickers_pd = tickers_pd.drop(index)
+#for index, row in tickers_pd.iterrows():
+#    if(row['Market Cap'] < 300_000_000):
+#        tickers_pd = tickers_pd.drop(index)
+
+tickers_pd = tickers_pd.loc[tickers_pd['Market Cap'] > 300_000_000]
 
 print('Len of ticker after: ' + str(len(tickers_pd)))
 tickers = list(tickers_pd['Symbol'])
